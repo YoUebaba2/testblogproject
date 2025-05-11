@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 動きのサンプル</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        .content {
+            display: block; /* ブロック要素にして中央揃えを適用 */
+            margin: 0 auto; /* 左右を自動でマージン設定 */
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: lightblue;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: opacity 1s ease;
+        }
+
+        .btn {
+            display: block; /* ブロック要素にして中央揃えを適用 */
+            margin: 0 auto; /* 左右を自動でマージン設定 */
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー部分 -->
+    <header>
+        <h1>ブログ</h1>
+        <nav>
+            <a href="../index.html">ホーム</a>
+            <a href="../about.html">About</a>
+        </nav>
+    </header>
+
+    <!-- 記事部分 -->
+    <article>
+        <h2>JavaScript 動きのサンプル</h2>
+        <button class="btn" id="showButton">テキストを表示</button>
+
+        <div class="content" id="content">
+            <p>こんにちは！これはJavaScriptを使った簡単なアニメーションのサンプルです。</p>
+            <p>ボタンをクリックすると、このテキストがフェードインします。</p>
+        </div>
+    </article>
+
+    <!-- 外部スクリプトファイルを読み込む -->
+    <script src="../js/script1.js"></script>
+
+</body>
+</html>
