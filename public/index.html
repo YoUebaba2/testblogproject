@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>テストブログ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>テストブログ</h1>
+        <nav>
+          <ul>
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">記事一覧</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </nav>
+    </header>
+
+  <main>
+    <input type="text" id="search-input" placeholder="検索キーワード">
+    <button id="search-button">検索</button>        
+    <div id="results"></div>
+    
+    <section class="articles" id="article-list">
+      <article class="article" data-title="初めての記事">
+        <h2>初めての記事</h2>
+        <p>これはブログの最初の投稿です。ようこそ！</p>
+        <a href="posts/post0.html">続きを読む</a>
+      </article>
+
+      <article class="article" data-title="カフェオープン">
+        <h2>カフェオープン</h2>
+        <p>新しいカフェがオープンしました。</p>
+        <a href="posts/post1.html">続きを読む</a>
+      </article>
+
+      <article class="article" data-title="javascriptサンプル">
+        <h2>javascriptサンプル</h2>
+        <p>javascriptサンプルのページです。</p>
+        <a href="posts/post2.html">続きを読む</a>
+      </article>
+
+      <article class="article" data-title="旅行の思い出">
+        <h2>旅行の思い出</h2>
+        <img src="images/test.jpeg" alt="旅行の風景" style="width: 30%; border-radius: 8px;">
+        <p>最近行った旅行のことを書きます。</p>
+        <a href="#">続きを読む</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 わたしのブログ</p>
+  </footer>
+
+  <script src="js/search.js"></script>
+</body>
+</html>
