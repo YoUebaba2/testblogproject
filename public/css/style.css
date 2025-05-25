@@ -59,6 +59,18 @@ body {
   .article a:hover {
     text-decoration: underline;
   }
+
+  .article-image {
+    width: 400px;
+    height: auto; /* 高さは自動で調整 */
+  }
+  
+  .caption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.5rem;
+  }
+
   nav ul {
     list-style: none;
     display: flex;
