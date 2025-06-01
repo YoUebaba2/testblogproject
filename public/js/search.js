@@ -1,4 +1,12 @@
 "use strict";
+// HTMLの特殊文字をエスケープする関数（サニタイジング）
+function escapeHtml(text) {
+    return text.replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("search-input");
     const searchButton = document.getElementById("search-button");
@@ -42,7 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // 結果が見つからないときのメッセージ
         if (!found) {
             const message = document.createElement("p");
-            message.textContent = "該当する記事は見つかりませんでした。";
+            // サニタイジングした文字列をtextContentでセット
+            // ここはテキストなので通常 textContent で十分安全だが、
+            // もし innerHTML を使うなら必須。
+            message.textContent = escapeHtml("該当する記事は見つかりませんでした。");
             resultsContainer.appendChild(message);
         }
     }
